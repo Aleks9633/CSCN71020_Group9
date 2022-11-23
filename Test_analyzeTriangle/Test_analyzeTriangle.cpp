@@ -31,8 +31,8 @@ namespace TestanalyzeTriangle
 
 		TEST_METHOD(TestMethod4)
 		{
-			char* Result = analyzeTriangle(1, 2, 3);
-			Assert::AreEqual("it does not form a triangle. invalid input", Result);
+			char* Result = analyzeTriangle(1, 20, 30);
+			Assert::AreEqual("Not a triangle", Result);
 		}
 	};
 }
