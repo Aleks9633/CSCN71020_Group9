@@ -5,19 +5,27 @@
 #include "main.h"
 
 
+float* analyzeTriangleAngle(side1, side2, side3);
+
 char* analyzeTriangle(int side1, int side2, int side3) {
 	char* result = "";
-	if (side1 <= 0 || side2 <= 0 || side3 <= 0) {
+	if (side1 <= 0 || side2 <= 0 || side3 <= 0 || side1 + side2 <= side3 || side2 + side3 <= side1 || side1 + side3 <= side2) {
 		result = "Not a triangle";
 	}
 	else if (side1 == side2 && side1 == side3) {
+
+		analyzeTriangleAngle(side1, side2, side3);
 		result = "Equilateral triangle";
 	}
 	else if ((side1 == side2 && side1 != side3) ||
 		(side1 == side3 && side1 != side2) || (side2 == side3 && side1 != side2)) {
+
+		analyzeTriangleAngle(side1, side2, side3);
 		result = "Isosceles triangle";
 	}
 	else {
+
+		analyzeTriangleAngle(side1, side2, side3);
 		result = "Scalene triangle";
 	}
 
@@ -29,6 +37,12 @@ float* analyzeTriangleAngle(int side1, int side2, int side3) {
 	float angles[3];
 
 	if (side1 <= 0 || side2 <= 0 || side3 <= 0 || side1 + side2 <= side3 || side2 + side3 <= side1 || side1 + side3 <= side2) {
+
+		angles[0] = -1;
+		angles[1] = -1;
+		angles[2] = -1;
+
+		return angles;
 
 		printf("it does not form a triangle. invalid input"); //based of triangle inequality theorem if the sides dont add up to form a traingle
 	}
