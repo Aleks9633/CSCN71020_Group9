@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdbool.h>
 #include "math.h"
@@ -24,6 +25,11 @@ int main() {
 			float* angles = analyzeTriangleAngle(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2]);
 			printf_s("%s\n", result);
 			break;
+		case 2:
+			printf_s("Rectangle Selected.\n");
+			int RectangleSides[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
+			int* rectangleSidesPtr = getRectangleSides(RectangleSides);
+			polygonPoints(rectangleSidesPtr[0], rectangleSidesPtr[1], rectangleSidesPtr[2], rectangleSidesPtr[3], rectangleSidesPtr[4], rectangleSidesPtr[5], rectangleSidesPtr[6], rectangleSidesPtr[7], );
 		case 0:
 			continueProgram = false;
 			break;
@@ -63,4 +69,13 @@ int* getTriangleSides(int* triangleSides) {
 		scanf_s("%d", &triangleSides[i]);
 	}
 	return triangleSides;
+}
+
+int* getRectangleSides(int* RectangleSides) {
+	printf_s("Enter the four x,y pairs of the rectangle: \n");
+	for (int i = 0; i < 8; i++)
+	{
+		scanf_s("%d", &RectangleSides[i]);
+	}
+	return RectangleSides;
 }
