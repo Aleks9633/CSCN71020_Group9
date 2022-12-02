@@ -4,10 +4,14 @@
 #include "math.h"
 #include "main.h"
 #include "triangleSolver.h"
+#include"point.h"
 
 int side = 0;
 
 int main() {
+	char* rectangle = "";
+	char string[40] = "";
+	char result[40] = "";
 	bool continueProgram = true;
 	while (continueProgram) {
 		printWelcome();
@@ -27,9 +31,11 @@ int main() {
 			break;
 		case 2:
 			printf_s("Rectangle Selected.\n");
-			int RectangleSides[8] = { 0, 0, 0, 0, 0, 0, 0, 0 };
-			int* rectangleSidesPtr = getRectangleSides(RectangleSides);
-			polygonPoints(rectangleSidesPtr[0], rectangleSidesPtr[1], rectangleSidesPtr[2], rectangleSidesPtr[3], rectangleSidesPtr[4], rectangleSidesPtr[5], rectangleSidesPtr[6], rectangleSidesPtr[7], );
+			int pointX[4] = { 0, 0, 0, 0 };
+			int pointY[4] = { 0,0,0,0 };
+			int* rectangleSidesPtr = getRectangleSides(pointX,pointY);
+			rectangle = polygonPoints(pointX[0], pointY[0], pointX[1], pointY[1], pointX[2], pointY[2], pointX[3], pointY[3], &string);
+			break;
 		case 0:
 			continueProgram = false;
 			break;
@@ -71,11 +77,17 @@ int* getTriangleSides(int* triangleSides) {
 	return triangleSides;
 }
 
-int* getRectangleSides(int* RectangleSides) {
-	printf_s("Enter the four x,y pairs of the rectangle: \n");
-	for (int i = 0; i < 8; i++)
+int* getRectangleSides(int* pointX,int* pointY) 
+{
+	int points = (pointX, pointY); //Create points int to return a value 
+	for (int i = 0; i < 4; i++)
 	{
-		scanf_s("%d", &RectangleSides[i]);
+		printf("Input (x,y) values:");
+		if ((scanf_s("%d %d", &pointX[i], &pointY[i]) != 2) || (pointX[i] < 0) || (pointY[i] < 0)) //Making sure input is correct
+		{
+			fprintf(stderr, "invalid input!\n");
+		
+		}
 	}
-	return RectangleSides;
+	return points;
 }
