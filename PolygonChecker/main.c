@@ -31,10 +31,10 @@ int main() {
 			break;
 		case 2:
 			printf_s("Rectangle Selected.\n");
-			int pointX[4] = { 0, 0, 0, 0 };
-			int pointY[4] = { 0, 0, 0, 0 };
-			int* rectangleSidesPtr = getRectangleSides(pointX,pointY);
-			rectangle = polygonPoints(pointX[0], pointY[0], pointX[1], pointY[1], pointX[2], pointY[2], pointX[3], pointY[3], &string);
+			int X[4] = { 0, 0, 0, 0 };
+			int Y[4] = { 0, 0, 0, 0 };
+			int* rectangleSidesPtr = getRectangleSides(XY);
+			rectangle = polygonPoints(X[0], Y[0], X[1], Y[1], X[2], Y[2], X[3], Y[3], &string);
 			break;
 		case 0:
 			continueProgram = false;
@@ -77,13 +77,13 @@ int* getTriangleSides(int* triangleSides) {
 	return triangleSides;
 }
 
-int* getRectangleSides(int* pointX,int* pointY) 
+int* getRectangleSides(int* X,int* Y) 
 {
-	int points = (pointX, pointY); //Create points int to return a value 
+	int points = (X, Y); //Create points int to return a value 
 	for (int i = 0; i < 4; i++)
 	{
-		printf("Input (x,y) values:");
-		if ((scanf_s("%d %d", &pointX[i], &pointY[i]) != 2) || (pointX[i] < 0) || (pointY[i] < 0)) 
+		printf("Input (X,Y) values:");
+		if ((scanf_s("%d %d", &X[i], &Y[i]) != 2) || (X[i] < 0) || (Y[i] < 0)) 
 		{
 			fprintf(stderr, "invalid input!\n");
 			return 0;
