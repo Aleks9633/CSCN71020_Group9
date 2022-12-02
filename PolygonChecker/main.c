@@ -32,7 +32,7 @@ int main() {
 		case 2:
 			printf_s("Rectangle Selected.\n");
 			int pointX[4] = { 0, 0, 0, 0 };
-			int pointY[4] = { 0,0,0,0 };
+			int pointY[4] = { 0, 0, 0, 0 };
 			int* rectangleSidesPtr = getRectangleSides(pointX,pointY);
 			rectangle = polygonPoints(pointX[0], pointY[0], pointX[1], pointY[1], pointX[2], pointY[2], pointX[3], pointY[3], &string);
 			break;
@@ -83,10 +83,10 @@ int* getRectangleSides(int* pointX,int* pointY)
 	for (int i = 0; i < 4; i++)
 	{
 		printf("Input (x,y) values:");
-		if ((scanf_s("%d %d", &pointX[i], &pointY[i]) != 2) || (pointX[i] < 0) || (pointY[i] < 0)) //Making sure input is correct
+		if ((scanf_s("%d %d", &pointX[i], &pointY[i]) != 2) || (pointX[i] < 0) || (pointY[i] < 0)) 
 		{
 			fprintf(stderr, "invalid input!\n");
-		
+			return 0;
 		}
 	}
 	return points;
