@@ -33,7 +33,7 @@ int main() {
 			printf_s("Rectangle Selected.\n");
 			int X[4] = { 0, 0, 0, 0 };
 			int Y[4] = { 0, 0, 0, 0 };
-			int* rectangleSidesPtr = getRectangleSides(XY);
+			int* rectangleSidesPtr = getRectangleSides(X,Y);
 			rectangle = polygonPoints(X[0], Y[0], X[1], Y[1], X[2], Y[2], X[3], Y[3], &string);
 			break;
 		case 0:
@@ -57,9 +57,10 @@ void printWelcome() {
 }
 
 int printShapeMenu() {
-	printf_s("1. Triangle\n");
+	
 	printf_s("0. Exit\n");
-
+	printf_s("1. Triangle\n");
+	printf_s("2. Rectangle\n");
 	int shapeChoice;
 
 	printf_s("Enter number: ");
