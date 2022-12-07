@@ -8,7 +8,7 @@
 
 int side = 0;
 
-
+int* getRectangleSides(int* pointX, int* pointY);
 
 int main() {
 	char* rectangle = "";
