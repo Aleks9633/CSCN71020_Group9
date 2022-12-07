@@ -8,6 +8,8 @@
 
 int side = 0;
 
+
+
 int main() {
 	char* rectangle = "";
 	char string[40] = "";
