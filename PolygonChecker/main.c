@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdbool.h>
-#include <math.h>
+#include "math.h"
 #include "main.h"
 #include "triangleSolver.h"
 #include"point.h"
@@ -32,10 +32,10 @@ int main() {
 			printf_s("%s\n", result);
 			break;
 		case 2:
-			printf_s("Rectangle Selected.\n");
-			int X[4] = { 0, 0, 0, 0 };		//Creat X value of the points
-			int Y[4] = { 0, 0, 0, 0 };		//Creat Y value of the points
-			int* rectangleSidesPtr = getRectangleSides(pointX,pointY);
+			printf("Rectangle selected. \n");
+			int pointX[4] = { 0,0,0,0 }; //Creating an x value for the points
+			int pointY[4] = { 0,0,0,0 }; //Creating a y value for the points
+			int* rectanglePoints = getRectangleSides(pointX, pointY);
 			rectangle = polygonPoints(pointX[0], pointY[0], pointX[1], pointY[1], pointX[2], pointY[2], pointX[3], pointY[3], &string);
 			break;
 		case 0:
@@ -80,13 +80,13 @@ int* getTriangleSides(int* triangleSides) {
 	return triangleSides;
 }
 
-int* getRectangleSides(int* X,int* Y) 
+int* getRectangleSides(int* pointX,int* pointY) 
 {
-	int points = (X, Y); //Create points int to return a value 
+	int points = (pointX, pointY); //Create points int to return a value 
 	for (int i = 0; i < 4; i++)
 	{
 		printf("Input (X,Y) values:");
-		if ((scanf_s("%d %d", &X[i], &Y[i]) != 2) || (X[i] < 0) || (Y[i] < 0)) 
+		if ((scanf_s("%d %d", &pointX[i], &pointY[i]) != 2) || (pointX[i] < 0) || (pointY[i] < 0)) 
 		{
 			fprintf(stderr, "invalid input!\n");
 			return 0;
