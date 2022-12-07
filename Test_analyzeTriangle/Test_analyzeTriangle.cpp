@@ -33,6 +33,8 @@ namespace TestanalyzeTriangle
 		{
 			char* Result = analyzeTriangle(1, 20, 30);
 			Assert::AreEqual("Not a triangle", Result);
+
 		}
 	};
 }
+
