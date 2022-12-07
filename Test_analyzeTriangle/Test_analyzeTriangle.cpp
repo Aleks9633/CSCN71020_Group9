@@ -1,7 +1,10 @@
 #include "pch.h"
 #include "CppUnitTest.h"
 
-extern "C" char* analyzeTriangle(int side1, int side2, int side3);
+
+extern "C" {
+	char* analyzeTriangle(int side1, int side2, int side3);
+}
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
