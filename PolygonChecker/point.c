@@ -8,17 +8,17 @@
 
 
 
-char* points(int X1, int Y1, int X2, int Y2, int X3, int Y3, int X4, int Y4, char* stringptr)
+char* polygonPoints(int pointX1, int pointY1, int pointX2, int pointY2, int pointX3, int pointY3, int pointX4, int pointY4, char* stringptr)
 {
 	POINT p1, p2, p3, p4; 
-	p1.x = X1; 
-	p1.y = Y1;
-	p2.x = X2;
-	p2.y = Y2;
-	p3.x = X3;
-	p3.y = Y3;
-	p4.x = X4;
-	p4.y = Y4;
+	p1.x = pointX1;
+	p1.y = pointY1;
+	p2.x = pointX2;
+	p2.y = pointY2;
+	p3.x = pointX3;
+	p3.y = pointY3;
+	p4.x = pointX4;
+	p4.y = pointY4;
 
 	char* result = "";
 	int perimeter = 0;

@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdbool.h>
-#include "math.h"
+#include <math.h>
 #include "main.h"
 #include "triangleSolver.h"
 #include"point.h"
@@ -35,8 +35,8 @@ int main() {
 			printf_s("Rectangle Selected.\n");
 			int X[4] = { 0, 0, 0, 0 };		//Creat X value of the points
 			int Y[4] = { 0, 0, 0, 0 };		//Creat Y value of the points
-			int* rectangleSidesPtr = getRectangleSides(X,Y);
-			rectangle = points(X[0], Y[0], X[1], Y[1], X[2], Y[2], X[3], Y[3], &string);
+			int* rectangleSidesPtr = getRectangleSides(pointX,pointY);
+			rectangle = polygonPoints(pointX[0], pointY[0], pointX[1], pointY[1], pointX[2], pointY[2], pointX[3], pointY[3], &string);
 			break;
 		case 0:
 			continueProgram = false;
