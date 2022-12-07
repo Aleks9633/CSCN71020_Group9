@@ -36,7 +36,7 @@ int main() {
 			int X[4] = { 0, 0, 0, 0 };
 			int Y[4] = { 0, 0, 0, 0 };
 			int* rectangleSidesPtr = getRectangleSides(X,Y);
-			rectangle = polygonPoints(X[0], Y[0], X[1], Y[1], X[2], Y[2], X[3], Y[3], &string);
+			rectangle = point(X[0], Y[0], X[1], Y[1], X[2], Y[2], X[3], Y[3], &string);
 			break;
 		case 0:
 			continueProgram = false;
