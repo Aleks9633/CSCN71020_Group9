@@ -1,10 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdbool.h>
-#include "math.h"
+#include <math.h>
 #include "main.h"
 #include "triangleSolver.h"
-#include"point.h"
+#include "point.h"
 
 int side = 0;
 
@@ -80,7 +80,7 @@ int* getTriangleSides(int* triangleSides) {
 	return triangleSides;
 }
 
-int* getRectangleSides(int* pointX,int* pointY) 
+int getRectangleSides(int* pointX,int* pointY) 
 {
 	int points = (pointX, pointY); //Create points int to return a value 
 	for (int i = 0; i < 4; i++)
