@@ -14,18 +14,18 @@ namespace TestangleFunction
         TEST_METHOD(TestMethod1)
         {
             // Add a comment here saying what this test case does
-            float* actual = analyzeTriangleAngle(1, 1, 1);
+            float* angles = analyzeTriangleAngle(1, 1, 1);
 
             // We can have several assertion statements to make sure multiple conditions are true
             // in order for the test to pass
             // Here's checking the first index:
-            Assert::AreEqual(actual[0], 60.0);
+            Assert::AreEqual(angles[0], 60.0);
 
             // And the second index:
-            Assert::AreEqual(actual[1], 60.0);
+            Assert::AreEqual(angles[1], 60.0);
 
             // And the third:
-            Assert::AreEqual(actual[2], 60.0);
+            Assert::AreEqual(angles[2], 60.0);
         }
 	};
 }
