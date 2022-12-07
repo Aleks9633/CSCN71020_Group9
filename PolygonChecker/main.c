@@ -31,10 +31,10 @@ int main() {
 			break;
 		case 2:
 			printf_s("Rectangle Selected.\n");
-			int X[4] = { 0, 0, 0, 0 };
-			int Y[4] = { 0, 0, 0, 0 };
+			int X[4] = { 0, 0, 0, 0 };		//Creat X value of the points
+			int Y[4] = { 0, 0, 0, 0 };		//Creat Y value of the points
 			int* rectangleSidesPtr = getRectangleSides(X,Y);
-			rectangle = point(X[0], Y[0], X[1], Y[1], X[2], Y[2], X[3], Y[3], &string);
+			rectangle = points(X[0], Y[0], X[1], Y[1], X[2], Y[2], X[3], Y[3], &string);
 			break;
 		case 0:
 			continueProgram = false;

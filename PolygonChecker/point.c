@@ -8,7 +8,7 @@
 
 
 
-char* polygonPoints(int X1, int Y1, int X2, int Y2, int X3, int Y3, int X4, int Y4, char* stringptr)
+char* points(int X1, int Y1, int X2, int Y2, int X3, int Y3, int X4, int Y4, char* stringptr)
 {
 	POINT p1, p2, p3, p4; 
 	p1.x = X1; 
