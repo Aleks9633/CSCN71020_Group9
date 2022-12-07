@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test_analyzeTriangle", "Tes
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test_FourPoints", "Test_FourPoints\Test_FourPoints.vcxproj", "{44A153DE-2A9F-4929-9F54-2EBAA3A98859}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test_angleFunction", "Test_angleFunction\Test_angleFunction.vcxproj", "{F89ADF49-ED33-47FF-A1B1-90D163663913}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{44A153DE-2A9F-4929-9F54-2EBAA3A98859}.Release|x64.Build.0 = Release|x64
 		{44A153DE-2A9F-4929-9F54-2EBAA3A98859}.Release|x86.ActiveCfg = Release|Win32
 		{44A153DE-2A9F-4929-9F54-2EBAA3A98859}.Release|x86.Build.0 = Release|Win32
+		{F89ADF49-ED33-47FF-A1B1-90D163663913}.Debug|x64.ActiveCfg = Debug|x64
+		{F89ADF49-ED33-47FF-A1B1-90D163663913}.Debug|x64.Build.0 = Debug|x64
+		{F89ADF49-ED33-47FF-A1B1-90D163663913}.Debug|x86.ActiveCfg = Debug|Win32
+		{F89ADF49-ED33-47FF-A1B1-90D163663913}.Debug|x86.Build.0 = Debug|Win32
+		{F89ADF49-ED33-47FF-A1B1-90D163663913}.Release|x64.ActiveCfg = Release|x64
+		{F89ADF49-ED33-47FF-A1B1-90D163663913}.Release|x64.Build.0 = Release|x64
+		{F89ADF49-ED33-47FF-A1B1-90D163663913}.Release|x86.ActiveCfg = Release|Win32
+		{F89ADF49-ED33-47FF-A1B1-90D163663913}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
