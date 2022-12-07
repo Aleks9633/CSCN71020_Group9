@@ -14,7 +14,7 @@ namespace TestangleFunction
 		
         TEST_METHOD(TestMethod1)
         {
-           
+
         }
 	};
 }
