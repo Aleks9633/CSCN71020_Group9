@@ -1,7 +1,10 @@
 #include "pch.h"
 #include "CppUnitTest.h"
 
-extern "C" char* polygonPoints(int X1, int Y1, int X2, int Y2, int X3, int Y3, int X4, int Y4, char* stringptr);
+extern "C"
+{
+#include "point.h"
+}
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -22,7 +25,7 @@ namespace TestFourPoints
 			int X4 = 4;
 			int Y4 = 4;
 			char somestring[50] = "";
-			char* result = polygonPoints(X1, Y1, X2, Y2, X3, Y3, X4, Y4, somestring);
+			char* result = point(X1, Y1, X2, Y2, X3, Y3, X4, Y4, somestring);
 			Assert::AreEqual("16.00,and 16", result);
 
 		}
@@ -37,7 +40,7 @@ namespace TestFourPoints
 			int X4 = 8;
 			int Y4 = 12;
 			char somestring[50] = "";
-			char* result = polygonPoints(X1, Y1, X2, Y2, X3, Y3, X4, Y4, somestring);
+			char* result = point(X1, Y1, X2, Y2, X3, Y3, X4, Y4, somestring);
 			Assert::AreEqual("8.00,and 12", result);
 
 		}
@@ -52,7 +55,7 @@ namespace TestFourPoints
 			int X4 = 1;
 			int Y4 = 1;
 			char somestring[50] = "";
-			char* result = polygonPoints(X1, Y1, X2, Y2, X3, Y3, X4, Y4, somestring);
+			char* result = point(X1, Y1, X2, Y2, X3, Y3, X4, Y4, somestring);
 			Assert::AreEqual("This is not a rectangle.\n", result);
 
 		}
@@ -67,7 +70,7 @@ namespace TestFourPoints
 			int X4 = 1;
 			int Y4 = 1;
 			char somestring[50] = "";
-			char* result = polygonPoints(X1, Y1, X2, Y2, X3, Y3, X4, Y4, somestring);
+			char* result = point(X1, Y1, X2, Y2, X3, Y3, X4, Y4, somestring);
 			Assert::AreEqual("Not A Rectangle!\n", result);
 		}
 

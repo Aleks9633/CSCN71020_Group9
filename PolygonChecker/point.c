@@ -98,7 +98,7 @@ char* polygonPoints(int X1, int Y1, int X2, int Y2, int X3, int Y3, int X4, int 
 	}
 	else
 	{
-		printf("This is not a rectangle\n");
-		result = "This is not a rectangle.\n";
+		printf("Not A Rectangle\n");
+		result = "Not A Rectangle.\n";
 	}
 }
