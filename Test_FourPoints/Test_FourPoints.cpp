@@ -1,4 +1,4 @@
- #include "pch.h"
+#include "pch.h"
 #include "CppUnitTest.h"
 
 extern "C"
@@ -10,7 +10,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace TestFourPoints
 {
-	TEST_CLASS(TestpolygonPoints)
+	TEST_CLASS(TestFourPoints)
 	{
 	public:
 		
