@@ -1,14 +1,13 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
 #include "math.h"
 #include "main.h"
 #include "triangleSolver.h"
-#include"point.h"
+#include "point.h"
 
 int side = 0;
-
-int* getRectangleSides(int* pointX, int* pointY);
 
 int main() {
 	char* rectangle = "";
@@ -35,7 +34,7 @@ int main() {
 			printf("Rectangle selected. \n");
 			int pointX[4] = { 0,0,0,0 }; //Creating an x value for the points
 			int pointY[4] = { 0,0,0,0 }; //Creating a y value for the points
-			int* rectanglePoints = getRectangleSides(pointX, pointY);
+			int* rectanglePoints = getRectanglePoint(pointX, pointY);
 			rectangle = polygonPoints(pointX[0], pointY[0], pointX[1], pointY[1], pointX[2], pointY[2], pointX[3], pointY[3], &string);
 			break;
 		case 0:
@@ -43,7 +42,6 @@ int main() {
 			break;
 		default:
 			printf_s("Invalid value entered.\n");
-			continueProgram = false; 
 			break;
 		}
 	}
@@ -66,8 +64,11 @@ int printShapeMenu() {
 	int shapeChoice;
 
 	printf_s("Enter number: ");
-	scanf_s("%1o", &shapeChoice);
-
+	if ((scanf_s("%1o", &shapeChoice) != 1) || shapeChoice < 0 || shapeChoice>3)
+	{
+		fprintf(stderr, "invalid input!\n");
+		exit(EXIT_FAILURE);
+	}
 	return shapeChoice;
 }
 
@@ -75,12 +76,16 @@ int* getTriangleSides(int* triangleSides) {
 	printf_s("Enter the three sides of the triangle: ");
 	for (int i = 0; i < 3; i++)
 	{
-		scanf_s("%d", &triangleSides[i]);
+		if ((scanf_s("%d", &triangleSides[i]) != 1) || triangleSides[i] < 0)
+		{
+			fprintf(stderr, "invalid input!\n");
+				exit(EXIT_FAILURE);
+		}
 	}
 	return triangleSides;
 }
 
-int* getRectangleSides(int* pointX,int* pointY) 
+int getRectanglePoint(int* pointX,int* pointY) 
 {
 	int points = (pointX, pointY); //Create points int to return a value 
 	for (int i = 0; i < 4; i++)
@@ -89,7 +94,7 @@ int* getRectangleSides(int* pointX,int* pointY)
 		if ((scanf_s("%d %d", &pointX[i], &pointY[i]) != 2) || (pointX[i] < 0) || (pointY[i] < 0)) 
 		{
 			fprintf(stderr, "invalid input!\n");
-			return 0;
+			exit(EXIT_FAILURE);
 		}
 	}
 	return points;

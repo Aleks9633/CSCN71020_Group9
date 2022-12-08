@@ -1,6 +1,6 @@
 #pragma once
 
-typedef struct point 
+typedef struct point //Struct for the rectangle points
 {
 	int x;
 	int y;

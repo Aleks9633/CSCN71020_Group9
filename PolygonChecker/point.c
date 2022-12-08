@@ -1,9 +1,9 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
+#include <stdio.h>
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
-#include <math.h>
+#include "math.h"
 #include"point.h"
 
 
