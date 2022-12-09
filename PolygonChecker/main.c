@@ -7,6 +7,7 @@
 #include "triangleSolver.h"
 #include "point.h"
 
+
 int side = 0;
 
 int main() {
