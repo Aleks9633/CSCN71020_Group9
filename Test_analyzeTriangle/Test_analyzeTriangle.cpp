@@ -96,7 +96,7 @@ namespace TestanalyzeTriangle
 			int side2 = 4;
 			int side3 = 3;
 
-			float result_side1_3 = 48.2;
+			float result_side1_3 = 48.18;
 			float result_side2 = 83.6;
 
 			float* ActualResult = analyzeTriangleAngle(side1, side2, side3);
@@ -176,7 +176,7 @@ namespace TestanalyzeTriangle
 			int Y4 = 1;
 			char somestring[50] = "";
 			char* result = polygonPoints(X1, Y1, X2, Y2, X3, Y3, X4, Y4, somestring);
-			Assert::AreEqual("This is not a rectangle.\n", result);
+			Assert::AreEqual("Not A Rectangle.\n", result);
 
 		}
 		TEST_METHOD(TestMethod4)
@@ -191,7 +191,7 @@ namespace TestanalyzeTriangle
 			int Y4 = 1;
 			char somestring[50] = "";
 			char* result = polygonPoints(X1, Y1, X2, Y2, X3, Y3, X4, Y4, somestring);
-			Assert::AreEqual("Not A Rectangle!\n", result);
+			Assert::AreEqual("Not A Rectangle.\n", result);
 		}
 
 	};
