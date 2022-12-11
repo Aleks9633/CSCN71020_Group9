@@ -75,8 +75,8 @@ namespace TestanalyzeTriangle
 			int side3 = 5;
 
 			float result_side1 = 90.0;
-			float result_side2 = 36.9;
-			float result_side3 = 53.1;
+			float result_side2 = 36.869896;
+			float result_side3 = 53.130104;
 
 			float* ActualResult = analyzeTriangleAngle(side1, side2, side3);
 
@@ -96,14 +96,14 @@ namespace TestanalyzeTriangle
 			int side2 = 4;
 			int side3 = 3;
 
-			float result_side1_3 = 48.18;
-			float result_side2 = 83.6;
+			float result_side1_3 = 48.189682;
+			float result_side2 = 83.620636;
 
 			float* ActualResult = analyzeTriangleAngle(side1, side2, side3);
 
 			Assert::AreEqual(result_side1_3, ActualResult[0]);
-			Assert::AreEqual(result_side2, ActualResult[1]);
-			Assert::AreEqual(result_side1_3, ActualResult[2]);
+			Assert::AreEqual(result_side1_3, ActualResult[1]);
+			Assert::AreEqual(result_side2, ActualResult[2]);
 
 		}
 

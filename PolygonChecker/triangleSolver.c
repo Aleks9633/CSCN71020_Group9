@@ -54,7 +54,7 @@ float* analyzeTriangleAngle(int side1, int side2, int side3) {
 	angles[1] = acos(temp2) * (180 / 3.14159265358979323846);
 	angles[2] = 180 - (angles[0] + angles[1]);
 
-	printf("Angle 1 is: %.1f\n Angle 2 is: %.1f\n Angle 3 is: %.1f\n", angles[0], angles[1], angles[2]); //printing output of the angles
+	printf("Angle 1 is: %f\n Angle 2 is: %f\n Angle 3 is: %f\n", angles[0], angles[1], angles[2]); //printing output of the angles
 
 	return angles;
 }
